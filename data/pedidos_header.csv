@@ -1,0 +1,4 @@
+PedidoExterno;Filial;Emissao;Cliente;Loja;CondPag;TabelaPreco;Vendedor;Obs;Origem
+EXT-2026-0001;01;19/01/2026;000001;01;001;001;000001;Pedido canal externo - entrega normal;ecommerce
+EXT-2026-0002;01;20/01/2026;000002;01;002;001;000001;Urgente - entregar ate dia 22/01;ecommerce
+EXT-2026-0003;01;21/01/2026;000003;01;001;001;000001;Pedido com itens invalidos para teste;ecommerce

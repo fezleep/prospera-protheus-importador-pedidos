@@ -1,0 +1,9 @@
+﻿__pycache__/
+*.pyc
+node_modules/
+_check_prospera/
+*.zip
+server.out.log
+.codex/
+.agents/
+_MACOSX/

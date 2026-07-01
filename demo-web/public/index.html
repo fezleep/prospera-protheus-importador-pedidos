@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Importador de Pedidos Protheus - Demo Local</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <main class="shell">
+      <header class="page-header">
+        <div>
+          <h1>Importador de Pedidos Protheus - Demo Local</h1>
+          <p>A rotina oficial está em ADVPL; esta tela é apenas uma simulação visual da regra de negócio.</p>
+        </div>
+        <div class="actions">
+          <button id="usarPadrao" type="button" class="primary">Processar pedidos do teste</button>
+          <button id="segunda" type="button" class="secondary">Simular segunda importação</button>
+          <button id="limpar" type="button" class="secondary">Limpar resultado</button>
+        </div>
+      </header>
+
+      <section class="panel test-files-panel">
+        <div class="panel-heading">
+          <h2>Arquivos padrão do teste</h2>
+          <span>modo principal da demo</span>
+        </div>
+        <div class="file-list" aria-label="Arquivos usados no processamento principal">
+          <code>data/pedidos_header.csv</code>
+          <code>data/pedidos_itens.csv</code>
+        </div>
+      </section>
+
+      <details class="panel upload-panel">
+        <summary>
+          <span>Carregar CSV manualmente (opcional)</span>
+          <small>O modo principal usa os arquivos padrão do teste.</small>
+        </summary>
+        <div class="upload-grid">
+          <label>
+            <span>pedidos_header.csv</span>
+            <input id="headerCsv" type="file" accept=".csv,text/csv">
+          </label>
+          <label>
+            <span>pedidos_itens.csv</span>
+            <input id="itensCsv" type="file" accept=".csv,text/csv">
+          </label>
+          <div class="manual-actions">
+            <button id="processarUpload" type="button" class="secondary">Processar CSV manual</button>
+          </div>
+        </div>
+      </details>
+
+      <section class="metrics" aria-label="Resumo">
+        <article>
+          <span>Total de pedidos lidos</span>
+          <strong id="totalPedidos">0</strong>
+        </article>
+        <article>
+          <span>Pedidos importados</span>
+          <strong id="pedidosImportados">0</strong>
+        </article>
+        <article>
+          <span>Pedidos rejeitados</span>
+          <strong id="pedidosRejeitados">0</strong>
+        </article>
+        <article>
+          <span>Itens rejeitados</span>
+          <strong id="itensRejeitados">0</strong>
+        </article>
+      </section>
+
+      <section class="panel">
+        <div class="panel-heading">
+          <h2>Status dos pedidos</h2>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Pedido externo</th>
+                <th>Cliente</th>
+                <th>Status</th>
+                <th>Motivo</th>
+                <th>Itens válidos</th>
+                <th>Itens rejeitados</th>
+              </tr>
+            </thead>
+            <tbody id="pedidosBody"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="grid">
+        <div class="panel">
+          <div class="panel-heading">
+            <h2>SC5 simulado</h2>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Pedido interno simulado</th>
+                  <th>Pedido externo</th>
+                  <th>Cliente</th>
+                  <th>Origem</th>
+                  <th>Emissão</th>
+                </tr>
+              </thead>
+              <tbody id="sc5Body"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-heading">
+            <h2>SC6 simulado</h2>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Pedido interno simulado</th>
+                  <th>Item</th>
+                  <th>Produto</th>
+                  <th>Quantidade</th>
+                  <th>Preço</th>
+                </tr>
+              </thead>
+              <tbody id="sc6Body"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-heading">
+          <h2>Logs CONOUT</h2>
+        </div>
+        <div id="logs" class="logs" role="log" aria-live="polite"></div>
+      </section>
+    </main>
+    <script src="/app.js"></script>
+  </body>
+</html>

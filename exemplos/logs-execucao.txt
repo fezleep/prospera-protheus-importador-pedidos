@@ -1,0 +1,23 @@
+[IMP_PEDIDOS] Exemplo ilustrativo de saída no ConOut. A execução real depende dos dados e do ambiente Protheus.
+[IMP_PEDIDOS] Início da importação
+[IMP_PEDIDOS] CSV lido: data/pedidos_header.csv | registros: 3
+[IMP_PEDIDOS] CSV lido: data/pedidos_itens.csv | registros: 6
+
+[IMP_PEDIDOS] Pedido externo: EXT-2026-0001
+[IMP_PEDIDOS] INCLUÍDO EXT-2026-0001 | itens válidos: 2
+
+[IMP_PEDIDOS] Pedido externo: EXT-2026-0002
+[IMP_PEDIDOS] REJEIÇÃO ITEM EXT-2026-0002/002 | produto inválido: PNEU9999999
+[IMP_PEDIDOS] INCLUÍDO EXT-2026-0002 | itens válidos: 1
+
+[IMP_PEDIDOS] Pedido externo: EXT-2026-0003
+[IMP_PEDIDOS] REJEITADO EXT-2026-0003 | cliente inexistente na base simulada/SA1
+[IMP_PEDIDOS] DIAGNÓSTICO ITEM EXT-2026-0003/001 | quantidade menor ou igual a zero
+[IMP_PEDIDOS] DIAGNÓSTICO ITEM EXT-2026-0003/002 | preço menor ou igual a zero
+
+[IMP_PEDIDOS] Resumo final
+[IMP_PEDIDOS] Processados: 3
+[IMP_PEDIDOS] Incluídos: 2
+[IMP_PEDIDOS] Rejeitados: 1
+[IMP_PEDIDOS] Erros: 0
+[IMP_PEDIDOS] Fim da importação
