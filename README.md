@@ -130,6 +130,24 @@ Para encerrar, pressionar `Ctrl+C` no terminal.
 
 Importante: `demo-web` e uma simulacao visual da regra de negocio. Ela nao executa Protheus, nao chama `MSExecAuto/MATA410`, nao usa AppServer/RPO e nao grava tabelas reais `SC5` ou `SC6`.
 
+## Demonstracao visual
+
+A entrega oficial deste projeto e o fonte ADVPL em `src/u_imp_pedidos.prw`.
+
+A demo web local foi criada apenas para visualizar a regra de negocio usando os CSVs do teste. Ela nao executa Protheus, `MSExecAuto`, `MATA410`, AppServer ou RPO.
+
+### Demo web completa
+
+![Demo web completa](docs/assets/readme/01-demo-web-completa.png)
+
+### Fonte ADVPL
+
+![Fonte ADVPL](docs/assets/readme/02-fonte-advpl.png)
+
+### Dicionario de dados
+
+![Dicionario de dados](docs/assets/readme/03-dicionario-dados.png)
+
 ## Escopo
 
 Esta entrega oficial continua sendo a rotina ADVPL e a documentacao tecnica. As pastas `demo-local/` e `demo-web/` sao apenas apoios locais de demonstracao quando nao ha ambiente Protheus disponivel. O projeto nao usa TLPP e nao adiciona dependencias externas obrigatorias.
